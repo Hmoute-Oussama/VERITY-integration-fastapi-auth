@@ -1,0 +1,4 @@
+version: 1
+project: fastapi-auth
+verification:
+  allow_exec: false

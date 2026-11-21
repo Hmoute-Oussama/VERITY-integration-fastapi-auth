@@ -1,0 +1,13 @@
+version: 1
+task: fastapi_authentication
+contracts:
+  - id: login_route
+    claim: POST /login exists.
+    verifier: code_route
+    args: {path: /login, method: POST}
+    required: true
+  - id: app_file
+    claim: The FastAPI application module exists.
+    verifier: file_exists
+    args: {paths: [app.py]}
+    required: true
